@@ -7,11 +7,8 @@ RSpec.describe User, type: :model do
     end
 
     describe 'ユーザー新規登録' do
-      context '新規登録がうまくいくとき' do        
-        it 'passwordが6文字以上であれば保存できること' do
-          @user.password = "abc123"
-          @user.password_confirmation = "abc123"
-          @user.valid?
+      context '新規登録がうまくいくとき' do
+        it '全ての値が正しく入力されていれば保存できること' do
           expect(@user).to be_valid
         end
       end
