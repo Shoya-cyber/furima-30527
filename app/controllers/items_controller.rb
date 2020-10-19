@@ -60,4 +60,5 @@ class ItemsController < ApplicationController
     if user_signed_in? && @item.order.present?
       redirect_to action: :index
     end
+  end
 end
